@@ -1,6 +1,6 @@
 const { ApolloServer, gql } = require('apollo-server');
 const uuid = require('uuid/v4');
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 4000;
 
 const typeDefs = gql`
   type Quote {
@@ -69,7 +69,8 @@ const resolvers = {
 };
   
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({ typeDefs, resolvers, playground: true, 
+    introspection:true });
 
 server.listen(port).then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`); // eslint-disable-line no-console

@@ -11,11 +11,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "eslint": "^5.16.0"
   },
   "dependencies": {
     "apollo-server": "^2.5.0",
     "graphql": "^14.3.0",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "develop": "GATSBY_GRAPHQL_IDE=playground gatsby develop"
   }
 }
